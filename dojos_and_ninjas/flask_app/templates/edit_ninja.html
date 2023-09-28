@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Edit Ninja</title>
+</head>
+<body>
+    <form action="/update/ninja" method="post" class="col-6 mx-auto">
+        <h2 class="text-center">Edit Ninja</h2>
+        <input type="hidden" name="id" value="{{ninja.id}}">
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" class="form-control" value="{{ninja.first_name}}">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" class="form-control" value="{{ninja.last_name}}">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" name="age" class="form-control" value="{{ninja.age}}">
+        </div>
+        <a href="/dojos">Dashboard</a>
+        <input type="submit" value="update" class="btn btn-primary">
+    </form>
+</body>
+</html>
